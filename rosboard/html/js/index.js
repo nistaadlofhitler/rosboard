@@ -12,8 +12,10 @@ importJsOnce("js/viewers/LaserScanViewer.js");
 importJsOnce("js/viewers/GeometryViewer.js");
 importJsOnce("js/viewers/PolygonViewer.js");
 importJsOnce("js/viewers/DiagnosticViewer.js");
-importJsOnce("js/viewers/TimeSeriesPlotViewer.js");
 importJsOnce("js/viewers/PointCloud2Viewer.js");
+importJsOnce("js/viewers/NumberViewer.js");/*
+importJsOnce("js/viewers/TimeSeriesPlotViewer.js");*/
+
 
 // GenericViewer must be last
 importJsOnce("js/viewers/GenericViewer.js");

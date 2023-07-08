@@ -4,13 +4,19 @@ class NumberViewer extends Viewer {
    * @override
    **/
   onCreate() {
-    this.viewerNode = $('<div></div>')
-      .css({ 'font-size': '11pt' })
+    this.viewerNode = $('<div style="height: 100%; width: 100%;"></div>')
+      .css({ 'font-size': '150pt' })
       .appendTo(this.card.content);
 
-    this.valueField = $('<div></div>')
+    this.valueField = $('<div style="height: 100%; width: 100%;"></div>')
       .addClass('monospace')
-      .css({ 'overflow': 'hidden', 'text-overflow': 'ellipsis' })
+      .css({ 
+       'overflow': 'visible',
+       'text-overflow': 'ellipsis' , 
+       'display': 'flex' , 
+       'align-items': 'center' , 
+       'text-align': 'center' , 
+       'justify-content': 'center' })
       .appendTo(this.viewerNode);
 
     super.onCreate();
