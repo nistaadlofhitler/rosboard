@@ -120,6 +120,8 @@ input, textarea, *[contenteditable=true] {
   color:#c0c0c0;
   box-shadow:3pt 3pt 3pt rgba(0,0,0,0.2);
   width:calc(100% - 40pt);
+  overflow: hidden;
+  resize: both;
 }
 
 .card-title {
@@ -188,6 +190,9 @@ input, textarea, *[contenteditable=true] {
   .card {
     display:inline-block;
     width:calc(50% - 40pt);
+    height: 100%;
+    resize: both;
+    overflow: hidden;
   }
 }
 
@@ -195,6 +200,9 @@ input, textarea, *[contenteditable=true] {
   .card {
     display:inline-block;
     width:calc(33% - 40pt);
+    height: 100%;
+    resize: both;
+    overflow: hidden;
   }
 }
 
@@ -202,6 +210,9 @@ input, textarea, *[contenteditable=true] {
   .card {
     display:inline-block;
     width:calc(25% - 40pt);
+    height: 100%;
+    resize: both;
+    overflow: hidden;
   }
 }
 

@@ -1,4 +1,4 @@
-"use strict";
+  "use strict";
 
 // Viewer is just a base class. It just has the boilerplate code to
 // instantiate the elemnets (title, content, close button, spinner) of a card
