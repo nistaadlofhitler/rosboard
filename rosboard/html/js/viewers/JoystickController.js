@@ -20,6 +20,20 @@ class JoystickController extends Viewer {
       })
       .appendTo(this.viewer);
 
+
+    this.coordinatesDisplay = $('<div></div>')
+      .css({
+        'font-size': '30px',
+        'color': 'white',
+        'margin-top': '10px',
+        
+      })
+      .appendTo(this.viewer);
+
+    // Update the display with initial values
+    this.updateCoordinatesDisplay(0, 0, 0);
+
+
     var options = {
         zone: document.getElementById(this.joyId),
         mode: 'semi',
@@ -44,9 +58,17 @@ class JoystickController extends Viewer {
       currentTransport.update_joy({joystickX, joystickY});
     });
   }
+  updateCoordinatesDisplay(x, y, z) {
+    this.coordinatesDisplay.html(`Linear Velocity: ${x.toFixed(2)}<br>Angular Velocity: ${z.toFixed(2)}`);
+  }
 
   onData(msg) {
     this.card.title.text(msg._topic_name);
+    const xCoordinate = msg.linear.x; 
+    const yCoordinate = msg.linear.y; // Replace 'y' with the actual field name in the message
+    const zCoordinate = msg.angular.z; // Replace 'z' with the actual field name in the message
+
+    this.updateCoordinatesDisplay(xCoordinate, yCoordinate, zCoordinate);
   }
 }
 
